@@ -204,6 +204,10 @@ footer a{text-decoration:none;color:#fff}
  form{padding:32px}
 }
 @media (max-width:420px){.logo{font-size:17px;gap:8px}.logo svg{width:30px;height:30px}.hphone{padding:8px 11px;gap:7px}.hphone b{font-size:17px}header .wrap{gap:8px}}
+.upload{display:flex!important;flex-direction:row!important;align-items:center;gap:10px;padding:14px 16px;border:1.5px dashed #9db7d3;border-radius:10px;background:#f4f8fc;color:#0a5fa8;font-weight:600;cursor:pointer}
+.upload:hover{background:#eaf2fa}
+.upload input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.upload:focus-within{outline:2px solid #0a5fa8;outline-offset:2px}
 </style>
 </head>
 <body>
@@ -431,7 +435,7 @@ footer a{text-decoration:none;color:#fff}
     <label>Co potřebujete<select name="sluzba" id="sluzba"><option>Instalatérství</option><option>Topení</option><option>Plyn</option><option>Jiné</option></select></label>
    </div>
    <label>Popis<textarea name="popis" placeholder="Např. kape baterie v koupelně, chci vyměnit kotel…"></textarea></label>
-   <label>Fotka (nepovinné)<input type="file" name="foto" accept="image/*"></label>
+   <label class="upload"><input type="file" name="foto" accept="image/*"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span class="up-t">Přidat fotku (nepovinné)</span></label>
    <button class="btn btn-s" type="submit">Odeslat poptávku</button>
   </form>
  </div>
@@ -452,6 +456,9 @@ footer a{text-decoration:none;color:#fff}
 
 <script>
 document.querySelectorAll('[data-sluzba]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('sluzba').value=a.dataset.sluzba}));
+</script>
+<script>
+document.querySelectorAll('.upload input').forEach(i=>i.addEventListener('change',()=>{const t=i.closest('.upload').querySelector('.up-t');t.textContent=i.files.length?('Vybráno: '+i.files[0].name):'Přidat fotku (nepovinné)'}));
 </script>
 </body>
 </html>
