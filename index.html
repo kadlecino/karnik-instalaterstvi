@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Radek Kárník – instalatér, topenář, plyn | Nepolisy a okolí</title>
+<meta name="description" content="Instalatérství, topenářství a plyn od roku 2002. Nepolisy, Hradec Králové a okolí. Nezávazná kalkulace. Tel. 776 326 380.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0b3a5b;--blue2:#11507d;--orange:#f28c28;--orange2:#e07812;--ink:#1d2733;--muted:#5b6b7b;--bg:#f5f7fa;--card:#fff;--line:#e3e8ee}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:var(--blue);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.2px}
+.logo span{color:var(--orange)}
+nav a{color:#cfe0ee;text-decoration:none;margin-left:22px;font-size:15px}
+nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.btn-o{background:var(--orange);color:#fff}.btn-o:hover{background:var(--orange2)}
+.btn-w{background:#fff;color:var(--blue)}.btn-w:hover{background:#e9f1f8}
+.btn-line{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.hero{background:linear-gradient(160deg,var(--blue) 0%,var(--blue2) 100%);color:#fff;padding:72px 0 84px}
+.hero h1{font-size:44px;line-height:1.12;margin:0 0 16px;letter-spacing:-.8px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lead{font-size:20px;color:#d6e4f0;max-width:620px;margin:0 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:40px;color:#d6e4f0;font-size:15px}
+.badges b{display:block;color:#fff;font-size:24px}
+section{padding:72px 0}
+h2{font-size:32px;margin:0 0 10px;letter-spacing:-.5px;color:var(--blue)}
+.sub{color:var(--muted);margin:0 0 36px;max-width:640px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+.card .ic{width:52px;height:52px;border-radius:12px;background:#fff3e6;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card h3{margin:0 0 8px;font-size:21px;color:var(--blue)}
+.card p{margin:0 0 16px;color:var(--muted)}
+.card ul{margin:0 0 18px;padding-left:18px;color:var(--ink)}
+.card a.more{color:var(--orange2);font-weight:600;text-decoration:none}
+.why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why .it b{display:block;font-size:30px;color:var(--orange2);font-weight:800}
+.why .it span{color:var(--muted);font-size:15px}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+.feature .box{background:var(--blue);color:#fff;border-radius:16px;padding:34px}
+.feature .box h3{margin:0 0 10px;font-size:24px}
+.feature .box p{color:#d6e4f0;margin:0}
+.refs{display:flex;flex-wrap:wrap;gap:10px}
+.refs span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.step:before{counter-increment:s;content:counter(s);display:flex;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:12px}
+.step h4{margin:0 0 6px;color:var(--blue);font-size:18px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.rating{display:flex;align-items:center;gap:28px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;flex-wrap:wrap}
+.rating .big{font-size:56px;font-weight:800;color:var(--blue);line-height:1}
+.stars{color:#f5b301;font-size:26px;letter-spacing:2px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+summary{font-weight:600;cursor:pointer;color:var(--blue)}
+details p{margin:10px 0 0;color:var(--muted)}
+.form-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:36px}
+form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:14px}
+label{font-size:14px;font-weight:600;color:var(--blue);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #cfd8e2;border-radius:10px;background:#fbfcfd;width:100%}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-list{list-style:none;padding:0;margin:20px 0 0}
+.contact-list li{margin-bottom:12px}
+.contact-list a{font-weight:600;text-decoration:none;color:var(--blue)}
+footer{background:var(--blue);color:#b9cde0;padding:34px 0 90px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.callbar{display:none}
+@media (max-width:860px){
+ nav{display:none}
+ .hero{padding:48px 0 60px}.hero h1{font-size:32px}.hero p.lead{font-size:18px}
+ .grid3,.why .grid4,.steps,.feature,.form-wrap{grid-template-columns:1fr}
+ .why .grid4{grid-template-columns:1fr 1fr}
+ section{padding:52px 0}h2{font-size:26px}
+ .row2{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;gap:8px;padding:10px;background:#fff;border-top:1px solid var(--line)}
+ .callbar a{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#">Kárník <span>instalatérství</span></a>
+  <nav><a href="#sluzby">Služby</a><a href="#reference">Reference</a><a href="#postup">Jak to probíhá</a><a href="#poptavka">Poptávka</a></nav>
+  <a class="btn btn-o" href="tel:+420776326380" style="padding:10px 16px">776 326 380</a>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <h1>Instalatér, topenář a plynař<br><em>Nepolisy a okolí</em></h1>
+  <p class="lead">Vodovodní rozvody, topení i plynové kotle. Přes 20 let praxe, od koupelny v rodinném domě po rozvody vody na Maledivách.</p>
+  <div class="ctas">
+   <a class="btn btn-o" href="tel:+420776326380">Zavolat 776 326 380</a>
+   <a class="btn btn-line" href="#poptavka">Poslat poptávku s fotkou</a>
+  </div>
+  <div class="badges">
+   <div><b>od 2002</b>v oboru</div>
+   <div><b>5,0 ★</b>hodnocení na Googlu</div>
+   <div><b>zdarma</b>nezávazná kalkulace</div>
+  </div>
+ </div>
+</section>
+
+<section id="sluzby">
+ <div class="wrap">
+  <h2>Co dělám</h2>
+  <p class="sub">Byty, rodinné domy i nebytové prostory. Rád poradím, navrhnu řešení a připravím nezávaznou kalkulaci.</p>
+  <div class="grid3">
+   <div class="card">
+    <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e07812" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7C12 2.7 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></div>
+    <h3>Instalatérství</h3>
+    <p>Dlouholeté zkušenosti s vodovodními rozvody.</p>
+    <ul><li>rozvody vody a odpadů</li><li>koupelny a kuchyně</li><li>opravy a výměny baterií, WC, bojlerů</li></ul>
+    <a class="more" href="#poptavka" data-sluzba="Instalatérství">Poptat instalatérství →</a>
+   </div>
+   <div class="card">
+    <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e07812" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 6v12M11 6v12M15 6v12M19 6v12"/></svg></div>
+    <h3>Topení</h3>
+    <p>Montáž a výměna topných systémů.</p>
+    <ul><li>radiátory a rozvody topení</li><li>podlahové topení</li><li>kotle a další topná tělesa</li></ul>
+    <a class="more" href="#poptavka" data-sluzba="Topení">Poptat topení →</a>
+   </div>
+   <div class="card">
+    <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e07812" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-2 2-3 4-3 6-1-1-2-2-2-3-2 2-4 5-4 9 0 4 3 7 7 7z"/></svg></div>
+    <h3>Plyn</h3>
+    <p>Instalace plynových zařízení.</p>
+    <ul><li>plynové kotle</li><li>plynoměry</li><li>plynové rozvody</li></ul>
+    <a class="more" href="#poptavka" data-sluzba="Plyn">Poptat plyn →</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="why">
+ <div class="wrap">
+  <div class="grid4">
+   <div class="it"><b>20+ let</b><span>praxe, firma od roku 2002</span></div>
+   <div class="it"><b>5,0 ★</b><span>hodnocení zákazníků na Googlu</span></div>
+   <div class="it"><b>byty i haly</b><span>od domácností po pivovary a obchodní centra</span></div>
+   <div class="it"><b>0 Kč</b><span>nezávazná kalkulace</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="reference">
+ <div class="wrap">
+  <h2>Reference</h2>
+  <p class="sub">Kromě domácností jsem pracoval i na velkých stavbách po celé republice i v zahraničí.</p>
+  <div class="feature" style="margin-bottom:28px">
+   <div class="box">
+    <h3>Maledivy, 2014</h3>
+    <p>Odsolovací a vodovodní rozvody pro velkou část ostrova (resort Velaa). Zatím největší zakázka.</p>
+   </div>
+   <div class="refs">
+    <span>Škoda Auto Mladá Boleslav</span><span>Pivovar Polička</span><span>Pivovar Chlumec n. C.</span><span>Pivovar Ježek Jihlava</span>
+    <span>Lučební závody Kolín</span><span>Policejní prezidium Svojšice</span><span>OC AFI Palace Pardubice</span><span>OC Harfa Praha</span>
+    <span>OC Breda Opava</span><span>Aupark Bratislava</span><span>Prodejny Rossmann</span><span>Bytový dům Braník</span><span>Zanzibar – Zuri Resort</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="postup" style="padding-top:0">
+ <div class="wrap">
+  <h2>Jak to probíhá</h2>
+  <p class="sub">Nemusíte nic složitě popisovat. Stačí fotka.</p>
+  <div class="steps">
+   <div class="step"><h4>Pošlete fotku</h4><p>Přes formulář níže, nebo rovnou zavolejte.</p></div>
+   <div class="step"><h4>Ozvu se</h4><p>Doptám se na detaily, případně se přijedu podívat.</p></div>
+   <div class="step"><h4>Kalkulace</h4><p>Dostanete nezávaznou cenu předem.</p></div>
+   <div class="step"><h4>Realizace</h4><p>Domluvíme termín a práci udělám pečlivě.</p></div>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="rating">
+   <div class="big">5,0</div>
+   <div>
+    <div class="stars">★★★★★</div>
+    <div style="color:var(--muted)">Hodnocení zákazníků na Googlu</div>
+   </div>
+   <a class="btn btn-w" style="border:1px solid var(--line);margin-left:auto" href="https://maps.google.com/?cid=8072407608156398748" target="_blank" rel="noopener">Zobrazit recenze na Googlu</a>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <h2>Časté otázky</h2>
+  <details><summary>Kolik to bude stát?</summary><p>Záleží na rozsahu. Pošlete fotku nebo zavolejte a připravím nezávaznou kalkulaci zdarma.</p></details>
+  <details><summary>Kde působíte?</summary><p>Nepolisy, Hradec Králové, Chlumec nad Cidlinou, Nový Bydžov a okolí. Větší zakázky i po celé ČR.</p></details>
+  <details><summary>Děláte i menší opravy?</summary><p>Ano. Výměna baterie, kapající kohoutek nebo nefunkční WC, nic není příliš malé.</p></details>
+ </div>
+</section>
+
+<section id="poptavka" style="background:#fff;border-top:1px solid var(--line)">
+ <div class="wrap form-wrap">
+  <div>
+   <h2>Poptávka</h2>
+   <p class="sub" style="margin-bottom:0">Napište, co potřebujete, a přiložte fotku. Ozvu se co nejdřív.</p>
+   <ul class="contact-list">
+    <li>Telefon: <a href="tel:+420776326380">776 326 380</a></li>
+    <li>E-mail: <a href="mailto:radekkarnik@seznam.cz">radekkarnik@seznam.cz</a></li>
+    <li>Adresa: Nepolisy 263, 503 63</li>
+   </ul>
+  </div>
+  <form action="https://formsubmit.co/radekkarnik@seznam.cz" method="POST" enctype="multipart/form-data">
+   <input type="hidden" name="_subject" value="Nová poptávka z webu">
+   <input type="hidden" name="_captcha" value="false">
+   <input type="hidden" name="_template" value="table">
+   <input type="text" name="_honey" style="display:none">
+   <div class="row2">
+    <label>Jméno<input name="jmeno" required autocomplete="name"></label>
+    <label>Telefon<input name="telefon" type="tel" required autocomplete="tel"></label>
+   </div>
+   <div class="row2">
+    <label>Obec<input name="obec" required></label>
+    <label>Co potřebujete<select name="sluzba" id="sluzba"><option>Instalatérství</option><option>Topení</option><option>Plyn</option><option>Jiné</option></select></label>
+   </div>
+   <label>Popis<textarea name="popis" placeholder="Např. kape baterie v koupelně, chci vyměnit kotel…"></textarea></label>
+   <label>Fotka (nepovinné)<input type="file" name="foto" accept="image/*"></label>
+   <button class="btn btn-o" type="submit">Odeslat poptávku</button>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div><b style="color:#fff">Radek Kárník</b> – instalatérství, topenářství, plyn<br>IČO 72883995 · Nepolisy 263, 503 63</div>
+  <div><a href="tel:+420776326380">776 326 380</a> · <a href="mailto:radekkarnik@seznam.cz">radekkarnik@seznam.cz</a></div>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="btn btn-o" href="tel:+420776326380">Zavolat</a>
+ <a class="btn btn-w" style="border:1px solid var(--line)" href="#poptavka">Poptávka</a>
+</div>
+
+<script>
+document.querySelectorAll('[data-sluzba]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('sluzba').value=a.dataset.sluzba}));
+</script>
+</body>
+</html>
