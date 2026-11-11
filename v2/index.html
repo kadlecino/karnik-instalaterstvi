@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Radek Kárník – instalatér, topenář, plyn | Nepolisy a okolí</title>
+<meta name="description" content="Instalatérství, topenářství a plyn od roku 2002. Nepolisy, Hradec Králové a okolí. Nezávazná kalkulace. Tel. 776 326 380.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#f5f8fa;--white:#fff;--navy:#10283a;--navy2:#1b3a50;--petrol:#0d6674;--petrol-l:#e3f0f2;
+ --copper:#c4682a;--copper-d:#a3541f;--muted:#55656f;--line:#d3dde3;
+ --serif:'Fraunces',Georgia,'Times New Roman',serif;
+ --sans:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:var(--sans);color:var(--navy);background:var(--bg);line-height:1.65;font-size:17px;overflow-x:hidden;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);margin:0 0 14px}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;font:600 16px/1.2 var(--sans);text-decoration:none;border:1.5px solid transparent;border-radius:999px;cursor:pointer}
+.btn-p{background:var(--navy);color:#fff}.btn-p:hover{background:var(--navy2)}
+.btn-c{background:var(--copper);color:#fff}.btn-c:hover{background:var(--copper-d)}
+.btn-l{border-color:var(--navy);color:var(--navy);background:transparent}.btn-l:hover{background:var(--navy);color:#fff}
+
+/* hlavicka */
+header{position:sticky;top:0;z-index:30;background:rgba(245,248,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:var(--serif);font-weight:600;font-size:21px;text-decoration:none;white-space:nowrap}
+nav{display:none}
+nav a{font-size:15px;font-weight:600;text-decoration:none;color:var(--muted);margin-left:26px}
+nav a:hover{color:var(--navy)}
+.hphone{font-weight:700;font-size:15px;text-decoration:none;color:var(--navy);border:1.5px solid var(--navy);padding:8px 16px;border-radius:999px;white-space:nowrap}
+
+/* hero */
+.hero{padding:40px 0 56px}
+.hero .wrap{display:grid;gap:34px}
+.hero .role{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);margin:0 0 18px}
+.hero h1{font-size:clamp(44px,12vw,84px);font-weight:400;line-height:1.02;margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--petrol)}
+.hero .lead{font-size:18px;color:var(--muted);max-width:480px;margin:0 0 28px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hfacts{display:flex;flex-wrap:wrap;gap:8px 28px;margin:34px 0 0;padding:18px 0 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.hfacts b{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--navy);margin-right:6px}
+.hfacts b i{font-style:normal;color:var(--copper)}
+
+.slot{position:relative;aspect-ratio:4/3;border:2px dashed #8fb0b8;border-radius:6px;background-color:#eef5f7;
+ background-image:repeating-linear-gradient(45deg,transparent 0 14px,rgba(13,102,116,.07) 14px 15px);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:6px;color:var(--petrol)}
+.slot:before,.slot:after{content:"";position:absolute;width:22px;height:22px;border:3px solid var(--petrol)}
+.slot:before{top:12px;left:12px;border-right:0;border-bottom:0}
+.slot:after{bottom:12px;right:12px;border-left:0;border-top:0}
+.slot svg{width:56px;height:56px;margin-bottom:8px}
+.slot strong{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--navy)}
+.slot span{font-size:14px;color:var(--muted)}
+
+/* sekce */
+section{padding:72px 0}
+h2{font-size:clamp(34px,7vw,52px);margin-bottom:14px}
+.sub{color:var(--muted);max-width:600px;margin:0 0 40px}
+
+/* sluzby */
+.services{border-top:1px solid var(--navy)}
+.svc{padding:30px 0;border-bottom:1px solid var(--line);display:grid;gap:12px}
+.svc .n{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--copper)}
+.svc h3{font-size:34px}
+.svc p{margin:0;color:var(--muted)}
+.svc ul{list-style:none;margin:0;padding:0}
+.svc li{padding:6px 0 6px 20px;position:relative}
+.svc li:before{content:"";position:absolute;left:0;top:17px;width:8px;height:1.5px;background:var(--petrol)}
+.svc a.more{font-weight:700;font-size:15px;text-decoration:none;color:var(--petrol);justify-self:start;border-bottom:1.5px solid var(--copper);padding-bottom:2px}
+.svc a.more:hover{color:var(--navy)}
+
+/* reference */
+.ref{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mal{display:grid;gap:10px;margin-bottom:44px}
+.ph{position:relative;overflow:hidden;background:#dbe5ea;margin:0;border-radius:4px}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{position:absolute;left:0;bottom:0;right:0;padding:26px 12px 9px;font-size:13px;line-height:1.3;color:#fff;background:linear-gradient(to top,rgba(10,25,36,.78),rgba(10,25,36,0))}
+.mal .big{aspect-ratio:16/10}
+.mal .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mal .pair .ph{aspect-ratio:4/3}
+.mal-text{padding-top:14px}
+.mal-text h3{font-size:30px;margin-bottom:8px}
+.mal-text p{margin:0;color:var(--muted);max-width:560px}
+.reflist-h{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);margin:0 0 12px}
+.reflist{list-style:none;margin:0;padding:0;border-top:1px solid var(--navy)}
+.reflist li{padding:11px 0;border-bottom:1px solid var(--line);font-size:16px}
+
+/* galerie */
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.strip .ph{aspect-ratio:1/1}
+.strip .ph.wide{grid-column:span 2;aspect-ratio:16/9}
+.strip .ph.small{grid-column:span 1}
+
+/* postup */
+.steps{list-style:none;margin:0;padding:0;border-top:1px solid var(--navy);counter-reset:s}
+.step{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:54px 1fr;gap:4px 12px;align-items:baseline}
+.step:before{content:counter(s);counter-increment:s;font-family:var(--serif);font-style:italic;font-size:42px;line-height:1;color:var(--copper);grid-row:span 2}
+.step h4{font-size:24px}
+.step p{margin:0;color:var(--muted);font-size:16px}
+
+/* recenze */
+.rev{background:var(--petrol-l);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin:20px 0 30px}
+.score .num{font-family:var(--serif);font-size:84px;line-height:.85;font-weight:400}
+.stars{display:inline-flex;gap:3px}
+.stars svg{width:24px;height:24px;fill:#fbbc04}
+.score .meta{display:grid;gap:6px}
+.score .meta>span{font-size:16px;font-weight:500}
+.gword{display:inline-flex;align-items:center;gap:9px;font-family:'Product Sans','Google Sans',Arial,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.2px;line-height:1}
+.gword svg{width:26px;height:26px}
+.gword .b{color:#4285f4}.gword .r{color:#ea4335}.gword .y{color:#fbbc05}.gword .g{color:#34a853}
+.rcards{display:grid;gap:12px;margin-bottom:30px}
+.rc{background:#fff;border:1px solid var(--line);padding:18px 18px 20px;border-radius:6px;position:relative}
+.rc .top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:18px;flex:none}
+.rc .who{font-weight:600;line-height:1.25;font-size:16px}
+.rc .who small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.rc .stars svg{width:18px;height:18px}
+.rc p{margin:10px 0 0;font-size:16px}
+.rc .gmini{position:absolute;right:14px;top:14px;width:20px;height:20px}
+
+/* faq */
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-family:var(--serif);font-weight:500;font-size:23px;position:relative;line-height:1.25}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-52%);font-size:30px;color:var(--copper);font-family:var(--sans);font-weight:400}
+details[open] summary:after{content:"–"}
+details p{margin:0 0 20px;color:var(--muted);max-width:640px}
+
+/* poptavka */
+.ask{background:var(--navy);color:#fff}
+.ask .kicker{color:#8fd0da}
+.ask .sub{color:#b9c8d1;margin-bottom:26px}
+.form-wrap{display:grid;gap:36px}
+.contact-list{list-style:none;padding:0;margin:0;border-top:1px solid #34536a}
+.contact-list li{padding:13px 0;border-bottom:1px solid #34536a;color:#9fb2bf;font-size:14px;display:grid;gap:2px}
+.contact-list a{font-family:var(--serif);font-size:26px;text-decoration:none;color:#fff;word-break:break-word}
+.contact-list a:hover{color:#f0b48a}
+.contact-list .plain{font-size:18px;color:#fff;font-weight:500}
+form{background:var(--white);color:var(--navy);padding:24px 20px;display:grid;gap:14px;border-radius:6px}
+label{font-size:14px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 13px;border:1px solid #b5c4cc;border-radius:4px;background:#fff;width:100%;color:var(--navy)}
+input[type=file]{padding:10px}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;gap:14px}
+form .btn{width:100%}
+
+footer{background:#0a1b28;color:#93a6b3;padding:30px 0 100px;font-size:14px}
+footer .wrap{display:grid;gap:14px}
+footer b{color:#fff;font-family:var(--serif);font-size:20px;font-weight:500}
+footer a{text-decoration:none;color:#d3dde3}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:8px;padding:10px;background:var(--bg);border-top:1px solid var(--line)}
+.callbar a{flex:1}
+
+@media (min-width:640px){
+ .strip{grid-template-columns:repeat(6,1fr)}
+ .strip .ph{grid-column:span 2;aspect-ratio:4/3}
+ .strip .ph.wide{grid-column:span 4;aspect-ratio:auto}
+ .strip .ph.tall{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+ .row2{grid-template-columns:1fr 1fr}
+ .rcards{grid-template-columns:1fr 1fr}
+ .reflist{columns:2;column-gap:36px}
+ .reflist li{break-inside:avoid}
+}
+@media (min-width:900px){
+ body{font-size:18px}
+ nav{display:block}
+ .callbar{display:none}
+ footer{padding-bottom:30px}
+ footer .wrap{grid-template-columns:1fr auto;align-items:end}
+ section{padding:100px 0}
+ .hero{padding:72px 0 88px}
+ .hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:64px;align-items:center}
+ .slot{aspect-ratio:4/5}
+ .services{border-top:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px}
+ .svc{border-top:1px solid var(--navy);border-bottom:0;align-content:start}
+ .mal{grid-template-columns:1.5fr 1fr;gap:12px}
+ .mal .big{aspect-ratio:auto;grid-row:span 2;min-height:420px}
+ .mal .pair{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+ .mal .pair .ph{aspect-ratio:auto}
+ .mal-text{grid-column:1/-1}
+ .steps{border-top:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0 28px}
+ .step{border-top:1px solid var(--navy);border-bottom:0;grid-template-columns:1fr;padding-top:18px}
+ .step:before{grid-row:auto;font-size:52px;margin-bottom:8px}
+ .rcards{grid-template-columns:repeat(3,1fr)}
+ .form-wrap{grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+ form{padding:32px}
+ .reflist{columns:3}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <path id="st" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+  <g id="gg">
+   <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+   <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+   <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+   <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+  </g>
+ </defs>
+</svg>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#">Radek Kárník</a>
+  <nav><a href="#sluzby">Služby</a><a href="#reference">Reference</a><a href="#postup">Jak to probíhá</a><a href="#recenze">Recenze</a><a href="#poptavka">Poptávka</a></nav>
+  <a class="hphone" href="tel:+420776326380">776 326 380</a>
+ </div>
+</header>
+
+<main>
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <p class="role">Instalatér · Topenář · Plynař</p>
+   <h1>Radek <em>Kárník</em></h1>
+   <p class="lead">Nepolisy a okolí. Vodovodní rozvody, topení i plynové kotle. Přes 20 let praxe, od koupelny v rodinném domě po rozvody vody na Maledivách.</p>
+   <div class="ctas">
+    <a class="btn btn-c" href="tel:+420776326380">Zavolat 776 326 380</a>
+    <a class="btn btn-l" href="#poptavka">Poslat poptávku s fotkou</a>
+   </div>
+   <div class="hfacts">
+    <span><b>od 2002</b>v oboru</span>
+    <span><b>5,0 <i>★</i></b>na Googlu</span>
+    <span><b>0 Kč</b>nezávazná kalkulace</span>
+   </div>
+  </div>
+  <div class="slot" role="img" aria-label="Místo pro vaši fotku">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.6"/></svg>
+   <strong>Místo pro vaši fotku</strong>
+   <span>např. vy při práci nebo hotová koupelna</span>
+  </div>
+ </div>
+</div>
+
+<section id="sluzby" style="padding-top:24px">
+ <div class="wrap">
+  <p class="kicker">Co dělám</p>
+  <h2>Voda, topení, plyn</h2>
+  <p class="sub">Byty, rodinné domy i nebytové prostory. Rád poradím, navrhnu řešení a připravím nezávaznou kalkulaci.</p>
+  <div class="services">
+   <div class="svc">
+    <span class="n">01</span>
+    <h3>Instalatérství</h3>
+    <p>Dlouholeté zkušenosti s vodovodními rozvody.</p>
+    <ul><li>rozvody vody a odpadů</li><li>koupelny a kuchyně</li><li>opravy a výměny baterií, WC, bojlerů</li></ul>
+    <a class="more" href="#poptavka" data-sluzba="Instalatérství">Poptat instalatérství →</a>
+   </div>
+   <div class="svc">
+    <span class="n">02</span>
+    <h3>Topení</h3>
+    <p>Montáž a výměna topných systémů.</p>
+    <ul><li>radiátory a rozvody topení</li><li>podlahové topení</li><li>kotle a další topná tělesa</li></ul>
+    <a class="more" href="#poptavka" data-sluzba="Topení">Poptat topení →</a>
+   </div>
+   <div class="svc">
+    <span class="n">03</span>
+    <h3>Plyn</h3>
+    <p>Instalace plynových zařízení.</p>
+    <ul><li>plynové kotle</li><li>plynoměry</li><li>plynové rozvody</li></ul>
+    <a class="more" href="#poptavka" data-sluzba="Plyn">Poptat plyn →</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="ref" id="reference">
+ <div class="wrap">
+  <p class="kicker">Reference</p>
+  <h2>Z velkých staveb</h2>
+  <p class="sub">Kromě domácností jsem pracoval i na velkých stavbách po celé republice i v zahraničí.</p>
+
+  <div class="mal">
+   <figure class="ph big">
+    <img src="../foto/maledivy-bagr.jpg" width="1280" height="720" loading="lazy" alt="Žlutý bagr na písečné pláži Malediv při zemních pracích pro potrubí, v pozadí palmy">
+    <figcaption>Výkopy pro potrubí na pláži, Maledivy</figcaption>
+   </figure>
+   <div class="pair">
+    <figure class="ph">
+     <img src="../foto/maledivy-potrubi.jpg" width="1280" height="720" loading="lazy" alt="Příprava černého plastového potrubí s modrým pruhem, ruka s vrtačkou vrtá otvory">
+     <figcaption>Příprava potrubí</figcaption>
+    </figure>
+    <figure class="ph">
+     <img src="../foto/maledivy-sklad.jpg" width="1280" height="720" loading="lazy" alt="Skladový přístřešek na ostrově plný krabic s materiálem, před ním několik lidí">
+     <figcaption>Sklad materiálu na ostrově</figcaption>
+    </figure>
+   </div>
+   <div class="mal-text">
+    <h3>Maledivy, 2014</h3>
+    <p>Odsolovací a vodovodní rozvody pro velkou část ostrova (resort Velaa). Zatím největší zakázka.</p>
+   </div>
+  </div>
+
+  <p class="reflist-h">Další zakázky</p>
+  <ul class="reflist">
+   <li>Škoda Auto Mladá Boleslav</li><li>Pivovar Polička</li><li>Pivovar Chlumec n. C.</li><li>Pivovar Ježek Jihlava</li>
+   <li>Lučební závody Kolín</li><li>Policejní prezidium Svojšice</li><li>OC AFI Palace Pardubice</li><li>OC Harfa Praha</li>
+   <li>OC Breda Opava</li><li>Aupark Bratislava</li><li>Prodejny Rossmann</li><li>Bytový dům Braník</li><li>Zanzibar – Zuri Resort</li>
+  </ul>
+ </div>
+</section>
+
+<section id="galerie">
+ <div class="wrap">
+  <p class="kicker">Z práce</p>
+  <h2>Pár záběrů ze stavby</h2>
+  <p class="sub">Starší fotky z různých zakázek. Technologie, strojovny, koupelny i velké nádrže.</p>
+  <div class="strip">
+   <figure class="ph wide">
+    <img src="../foto/technologie-voda.jpg" width="1280" height="720" loading="lazy" alt="Ruce při práci na technologii pro úpravu vody, čerpadla, ventily a plastové potrubí">
+    <figcaption>Technologie pro úpravu vody</figcaption>
+   </figure>
+   <figure class="ph tall">
+    <img src="../foto/nadrz-leseni.jpg" width="960" height="1280" loading="lazy" alt="Velká nádrž obklopená lešením se zelenou sítí">
+    <figcaption>Velká nádrž, průmyslová zakázka</figcaption>
+   </figure>
+   <figure class="ph">
+    <img src="../foto/strojovna-cerpadla.jpg" width="1280" height="720" loading="lazy" alt="Strojovna s čerpadly, tlakovou nádobou a ocelovým potrubím">
+    <figcaption>Strojovna s čerpadly</figcaption>
+   </figure>
+   <figure class="ph small">
+    <img src="../foto/sklad-radek-karnik.jpg" width="1280" height="720" loading="lazy" alt="Sklad materiálu na stavbě s nástřikem jména „Radek Kárník“ na plachtě, vedle svitek černého potrubí a hliněné trubky">
+    <figcaption>Sklad na stavbě s mým jménem</figcaption>
+   </figure>
+   <figure class="ph">
+    <img src="../foto/montaz-tym.jpg" width="1280" height="960" loading="lazy" alt="Tým pracovníků při práci na ocelové konstrukci na stavbě">
+    <figcaption>Parta na stavbě</figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+
+<section id="postup" style="padding-top:0">
+ <div class="wrap">
+  <p class="kicker">Postup</p>
+  <h2>Jak to probíhá</h2>
+  <p class="sub">Nemusíte nic složitě popisovat. Stačí fotka.</p>
+  <ol class="steps">
+   <li class="step"><h4>Pošlete fotku</h4><p>Přes formulář níže, nebo rovnou zavolejte.</p></li>
+   <li class="step"><h4>Ozvu se</h4><p>Doptám se na detaily, případně se přijedu podívat.</p></li>
+   <li class="step"><h4>Kalkulace</h4><p>Dostanete nezávaznou cenu předem.</p></li>
+   <li class="step"><h4>Realizace</h4><p>Domluvíme termín a práci udělám pečlivě.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="rev" id="recenze">
+ <div class="wrap">
+  <p class="kicker">Hodnocení zákazníků</p>
+  <h2>Recenze na Googlu</h2>
+  <div class="score">
+   <div class="num">5,0</div>
+   <div class="meta">
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#st"/></svg></div>
+    <span>5 hodnocení na Googlu</span>
+    <span class="gword" aria-label="Google">
+     <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#gg"/></svg>
+     <span><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+    </span>
+   </div>
+  </div>
+
+  <div class="rcards">
+   <article class="rc">
+    <svg class="gmini" viewBox="0 0 48 48" aria-hidden="true"><use href="#gg"/></svg>
+    <div class="top"><div class="av" style="background:#5b6abf">L</div><div class="who">Lukáš Jiroudek</div></div>
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg></div>
+    <p>Skvělé</p>
+   </article>
+   <article class="rc">
+    <svg class="gmini" viewBox="0 0 48 48" aria-hidden="true"><use href="#gg"/></svg>
+    <div class="top"><div class="av" style="background:#2a8a6b">O</div><div class="who">Ondrej Sanda<small>Místní průvodce</small></div></div>
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg></div>
+   </article>
+   <article class="rc">
+    <svg class="gmini" viewBox="0 0 48 48" aria-hidden="true"><use href="#gg"/></svg>
+    <div class="top"><div class="av" style="background:#c0562f">M</div><div class="who">Magdaléna Vachková</div></div>
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg></div>
+   </article>
+   <article class="rc">
+    <svg class="gmini" viewBox="0 0 48 48" aria-hidden="true"><use href="#gg"/></svg>
+    <div class="top"><div class="av" style="background:#8a4fa0">E</div><div class="who">Eliška Pánková</div></div>
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg></div>
+   </article>
+   <article class="rc">
+    <svg class="gmini" viewBox="0 0 48 48" aria-hidden="true"><use href="#gg"/></svg>
+    <div class="top"><div class="av" style="background:#3b7ea1">J</div><div class="who">Jiri Novak</div></div>
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg><svg viewBox="0 0 24 24"><use href="#st"/></svg></div>
+   </article>
+  </div>
+  <a class="btn btn-l" href="https://maps.google.com/?cid=8072407608156398748" target="_blank" rel="noopener">Zobrazit všechny recenze na Googlu</a>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <p class="kicker">Otázky</p>
+  <h2>Časté otázky</h2>
+  <div style="margin-top:28px">
+   <details><summary>Kolik to bude stát?</summary><p>Záleží na rozsahu. Pošlete fotku nebo zavolejte a připravím nezávaznou kalkulaci zdarma.</p></details>
+   <details><summary>Kde působíte?</summary><p>Nepolisy, Hradec Králové, Chlumec nad Cidlinou, Nový Bydžov a okolí. Větší zakázky i po celé ČR.</p></details>
+   <details><summary>Děláte i menší opravy?</summary><p>Ano. Výměna baterie, kapající kohoutek nebo nefunkční WC, nic není příliš malé.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="ask" id="poptavka">
+ <div class="wrap form-wrap">
+  <div>
+   <p class="kicker">Kontakt</p>
+   <h2>Poptávka</h2>
+   <p class="sub">Napište, co potřebujete, a přiložte fotku. Ozvu se co nejdřív.</p>
+   <ul class="contact-list">
+    <li>Telefon <a href="tel:+420776326380">776 326 380</a></li>
+    <li>E-mail <a href="mailto:radekkarnik@seznam.cz">radekkarnik@seznam.cz</a></li>
+    <li>Adresa <span class="plain">Nepolisy 263, 503 63</span></li>
+   </ul>
+  </div>
+  <form action="https://formsubmit.co/radekkarnik@seznam.cz" method="POST" enctype="multipart/form-data">
+   <input type="hidden" name="_subject" value="Nová poptávka z webu">
+   <input type="hidden" name="_captcha" value="false">
+   <input type="hidden" name="_template" value="table">
+   <input type="text" name="_honey" style="display:none">
+   <div class="row2">
+    <label>Jméno<input name="jmeno" required autocomplete="name"></label>
+    <label>Telefon<input name="telefon" type="tel" required autocomplete="tel"></label>
+   </div>
+   <div class="row2">
+    <label>Obec<input name="obec" required></label>
+    <label>Co potřebujete<select name="sluzba" id="sluzba"><option>Instalatérství</option><option>Topení</option><option>Plyn</option><option>Jiné</option></select></label>
+   </div>
+   <label>Popis<textarea name="popis" placeholder="Např. kape baterie v koupelně, chci vyměnit kotel…"></textarea></label>
+   <label>Fotka (nepovinné)<input type="file" name="foto" accept="image/*"></label>
+   <button class="btn btn-c" type="submit">Odeslat poptávku</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><b>Radek Kárník</b><br>Instalatérství, topenářství, plyn<br>IČO 72883995 · Nepolisy 263, 503 63</div>
+  <div><a href="tel:+420776326380">776 326 380</a> · <a href="mailto:radekkarnik@seznam.cz">radekkarnik@seznam.cz</a></div>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="btn btn-c" href="tel:+420776326380">Zavolat</a>
+ <a class="btn btn-l" href="#poptavka">Poptávka</a>
+</div>
+
+<script>
+document.querySelectorAll('[data-sluzba]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('sluzba').value=a.dataset.sluzba}));
+</script>
+</body>
+</html>
